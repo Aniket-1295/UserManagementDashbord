@@ -6,6 +6,7 @@ import { useSnackbar } from "notistack";
 
 const UserForm = ({ users, addUser, updateUser }) => {
 
+  //Library to create notifications
   const { enqueueSnackbar } = useSnackbar();
 
   const { id } = useParams();
@@ -75,6 +76,7 @@ const UserForm = ({ users, addUser, updateUser }) => {
   };
 
 
+  //custom Vlidations
   const validateInput=(data)=>{
 
     if (!data.name) {

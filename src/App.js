@@ -18,25 +18,29 @@ import './styles.css';
 
 function App() {
 
+  // State to store the list of users
   const [users,setUsers]=useState([])
 
+  // Fetch users from an external API when the component mounts
   useEffect(()=>{
 
     fetch(`https://jsonplaceholder.typicode.com/users`).then(response => response.json()).then(data =>setUsers(data))
 
   },[]);
 
+    // Function to add a new user to the list
   const addUser = (newUser) => {
     setUsers([...users, newUser]);
   };
 
 
+   // Function to update a user in the list
 
   const updateUser = (updatedUser) => {
     setUsers(users.map(user => user.id === updatedUser.id ? updatedUser : user));
   };
 
-
+ // Function to delete a user from the list
   const deleteUser = (id) => {
     setUsers(users.filter(user => user.id !== id));
   };
@@ -52,6 +56,8 @@ function App() {
 
      
     // </div>
+
+    // Main router setup
 
     <Router>
     <div className="app-container">

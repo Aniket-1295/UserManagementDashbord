@@ -1,18 +1,27 @@
 # User Management Dashboard
-A responsive and visually appealing User Management Dashboard built with React. This project provides a user interface for managing users.It features a clean layout, and a user-friendly design.
+A responsive and visually appealing User Management Dashboard built with React. This project provides a user interface for managing users. It features a clean layout, and a user-friendly design.
 
 ## Functionality
-Total User Count: Displays the total number of users in a highlighted card.
-View:User Can view there details.
-Add:User can dynamically update the list by adding new user details.
-Edit: User can modify user details.
-Delete:User can Delete there details.
-Search & Filter: Search bar functionality that allows filtering users by name, email, or phone number.
-Paginated User List: Displaying user information in a paginated table with 'Next' and 'Previous' navigation buttons for better usability.
-Responsive Design: The dashboard adapts to different screen sizes, ensuring a smooth experience on mobile, tablet, and desktop devices.
+- **Total User Count**: Displays the total number of users in a highlighted card.
+
+- **View**:User Can view there details.
+
+- **Add**:User can dynamically update the list by adding new user details.
+
+- **Edit**: User can modify user details.
+
+- **Delete**:User can Delete there details.
+
+- **Search & Filter**: Search bar functionality that allows filtering users by name, email, or phone number.
+
+- **Paginated User List**: Displaying user information in a paginated table with 'Next' and 'Previous' navigation buttons for better usability.
+
+- **Responsive Design**: The dashboard adapts to different screen sizes, ensuring a smooth experience on mobile, tablet, and desktop devices.
 
 ## Live Demo
-You can view the live application using the following URLs:
+You can view the live application using the following URL:
+
+[Live Demo](https://user-management-dashbord.vercel.app/)
 
 
 
@@ -20,29 +29,26 @@ You can view the live application using the following URLs:
 
 ## Optional Implementation
 
-Implement pagination.
-Added client-side validation for the user input form.
-responsive interface.
+- Implement pagination.
+- Added client-side validation for the user input form.
+- responsive interface.
 
 ## Additional Implementation
 
-User can search and Filter By there Name,Email and Phone Number.
-
-
-
-
+- User can search and Filter By there Name,Email and Phone Number.
 
 
 ## Data Source
 The user data displayed in this dashboard is fetched from a public API. This ensures that the data is always up-to-date and reflects real-world scenarios.
 
 ## Technologies Used
-React: JavaScript library for building the user interface.
-React-router-dom: For routing Purpose.
-Notistack librarie: To Display notifications.
-CSS: Custom styles to enhance the appearance and make the dashboard user-friendly.
-Vercel: For deployment and hosting.
-Public API: User data is fetched from a reliable public API to display in the dashboard.
+
+- **React**: JavaScript library for building the user interface.
+- **React-router-dom**: For routing Purpose.
+- **Notistack librarie**: To Display notifications.
+- **CSS**: Custom styles to enhance the appearance and make the dashboard user-friendly.
+- **Vercel**: For deployment and hosting.
+- **Public API**: User data is fetched from a reliable public API to display in the dashboard.
 
 ## Setup Instructions
 Clone the repository:

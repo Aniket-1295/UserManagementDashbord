@@ -2,7 +2,7 @@ import React from 'react'
 
 const Dashboard = ({ users }) => {
 
-  const totalUsers=users.length;
+  const totalUsers=users.length; //got the user Count
 
   console.log(totalUsers)
 

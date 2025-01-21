@@ -3,14 +3,19 @@ import React, { useState } from 'react';
 
 const SearchAndFilter = ({ users }) => {
 
+// State to track the search term entered by the user
   const [searchTerm, setSearchTerm] = useState('');
+   // State to track the selected filter criterion (name, email, or phone)
   const [filterBy, setFilterBy] = useState('name');
+   // State to determine whether filtering is active
   const [isFiltering, setIsFiltering] = useState(false);
 
+   // Function to activate filtering when the user clicks the "Filter" button
   const handleSearch = () => {
     setIsFiltering(true);
   };
 
+  // Filter users based on the selected criterion and search term
   const filteredUsers = users.filter(user => {
     if (!isFiltering) return true;
     if (filterBy === 'name') {
