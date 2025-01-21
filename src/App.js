@@ -1,4 +1,6 @@
 import React from 'react';
+import { useState, useEffect } from 'react';
+
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 import Dashboard from './components/Dashboard';
@@ -15,6 +17,16 @@ import './styles.css';
 
 
 function App() {
+
+  const [users,setUsers]=useState([])
+
+  useEffect(()=>{
+
+    fetch(`https://jsonplaceholder.typicode.com/users`).then(response => response.json()).then(data =>setUsers(data))
+
+  },[])
+
+
   return (
     // <div className="App">
 
@@ -31,7 +43,7 @@ function App() {
       <SideNav />
       <div className="content-container">
         <Routes>
-          <Route path="/" element={<Dashboard/>} />
+          <Route path="/" element={<Dashboard users={users}/>} />
           <Route path="/users" element={<UserList/>} />
           <Route path="/users/create" element={<UserForm />} />
           <Route path="/view-users" element={<ViewUsers/>} /> 
