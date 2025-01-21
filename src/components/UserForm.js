@@ -1,9 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
+import { useSnackbar } from "notistack";
 
 
 
 const UserForm = ({ users, addUser, updateUser }) => {
+
+  const { enqueueSnackbar } = useSnackbar();
 
   const { id } = useParams();
   const navigate = useNavigate();
@@ -36,6 +39,16 @@ const UserForm = ({ users, addUser, updateUser }) => {
   }, [id, users, editing]);
 
   const handleSubmit = (e) => {
+    if (!validateInput(formData))  {
+      e.preventDefault();
+
+      return
+
+
+
+
+    }
+      
     e.preventDefault();
     if (editing) {
       updateUser(formData);
@@ -62,6 +75,69 @@ const UserForm = ({ users, addUser, updateUser }) => {
   };
 
 
+  const validateInput=(data)=>{
+
+    if (!data.name) {
+      enqueueSnackbar("name is a required field", { variant: "warning" });
+      return false;
+    }
+
+    if (data.username.length < 6) {
+      enqueueSnackbar("Username must be at least 6 characters", {
+        variant: "warning",
+      });
+      return false;
+    }
+    
+
+    if (data.phone.length < 10 ) {
+      enqueueSnackbar("Phone Number must be  10 digits", {
+        variant: "warning",
+      });
+      return false;
+    }
+
+   if(data.phone.length >= 11 ) {
+    enqueueSnackbar("Phone Number must be  10 digits", {
+      variant: "warning",
+    });
+
+      return false;
+
+
+
+
+
+      
+
+    }
+
+
+
+    
+    if (data.address.zipcode < 6) {
+      enqueueSnackbar("zipcode must be  6 digits", {
+        variant: "warning",
+      });
+      return false;
+    }
+
+   
+
+    return true;
+
+    
+
+
+
+
+
+
+
+
+  }
+
+
 
 
 
@@ -78,7 +154,7 @@ const UserForm = ({ users, addUser, updateUser }) => {
           value={formData.name}
           placeholder="Name"
           onChange={handleChange}
-          required
+          // required
         />
         <input
           type="text"
@@ -97,7 +173,7 @@ const UserForm = ({ users, addUser, updateUser }) => {
           required
         />
         <input
-          type="text"
+          type="number"
           name="phone"
           value={formData.phone}
           placeholder="Phone"
@@ -139,7 +215,7 @@ const UserForm = ({ users, addUser, updateUser }) => {
           required
         />
         <input
-          type="text"
+          type="number"
           name="address.zipcode"
           value={formData.address.zipcode}
           placeholder="Zipcode"

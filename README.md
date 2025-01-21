@@ -1,70 +1,84 @@
-# Getting Started with Create React App
+# User Management Dashboard
+A responsive and visually appealing User Management Dashboard built with React. This project provides a user interface for managing users.It features a clean layout, and a user-friendly design.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Functionality
+Total User Count: Displays the total number of users in a highlighted card.
+View:User Can view there details.
+Add:User can dynamically update the list by adding new user details.
+Edit: User can modify user details.
+Delete:User can Delete there details.
+Search & Filter: Search bar functionality that allows filtering users by name, email, or phone number.
+Paginated User List: Displaying user information in a paginated table with 'Next' and 'Previous' navigation buttons for better usability.
+Responsive Design: The dashboard adapts to different screen sizes, ensuring a smooth experience on mobile, tablet, and desktop devices.
 
-## Available Scripts
+## Live Demo
+You can view the live application using the following URLs:
 
-In the project directory, you can run:
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
+## Optional Implementation
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Implement pagination.
+Added client-side validation for the user input form.
+responsive interface.
 
-### `npm run build`
+## Additional Implementation
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+User can search and Filter By there Name,Email and Phone Number.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Data Source
+The user data displayed in this dashboard is fetched from a public API. This ensures that the data is always up-to-date and reflects real-world scenarios.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Technologies Used
+React: JavaScript library for building the user interface.
+React-router-dom: For routing Purpose.
+Notistack librarie: To Display notifications.
+CSS: Custom styles to enhance the appearance and make the dashboard user-friendly.
+Vercel: For deployment and hosting.
+Public API: User data is fetched from a reliable public API to display in the dashboard.
 
-## Learn More
+## Setup Instructions
+Clone the repository:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```
+git clone https://github.com/Aniket-1295/UserManagementDashbord.git
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```
+Navigate into the project directory:
 
-### Code Splitting
+```
+cd userdashbord
+```
+Install the dependencies:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+```
+npm install
+```
+Run the application locally:
 
-### Analyzing the Bundle Size
+```
+npm start
+```
+The app will be running at http://localhost:3000
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-### Making a Progressive Web App
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-### Advanced Configuration
+## View Users
+![image](https://github.com/user-attachments/assets/e923108f-b4ae-4c36-aec0-d03fe9ba7557)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## Manage Users (Edit or Delete)
+![image](https://github.com/user-attachments/assets/69c69fb0-62c0-4655-b961-eea43bf11288)
 
-### Deployment
+## Add New User
+![image](https://github.com/user-attachments/assets/1405abe4-3355-45f5-bb0f-05691a8bd3ef)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Search and Filter
+![image](https://github.com/user-attachments/assets/5ece2768-318c-45b2-aa2c-f15ed4edb347)
