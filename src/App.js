@@ -26,6 +26,15 @@ function App() {
 
   },[])
 
+  const updateUser = (updatedUser) => {
+    setUsers(users.map(user => user.id === updatedUser.id ? updatedUser : user));
+  };
+
+
+  const deleteUser = (id) => {
+    setUsers(users.filter(user => user.id !== id));
+  };
+
 
   return (
     // <div className="App">
@@ -44,10 +53,10 @@ function App() {
       <div className="content-container">
         <Routes>
           <Route path="/" element={<Dashboard users={users}/>} />
-          <Route path="/users" element={<UserList/>} />
+          <Route path="/users" element={<UserList users={users} deleteUser={deleteUser} />} />
           <Route path="/users/create" element={<UserForm />} />
           <Route path="/view-users" element={<ViewUsers users={users} />} /> 
-          <Route path="/users/edit/:id" element={<UserForm/>} />
+          <Route path="/users/edit/:id" element={<UserForm users={users} updateUser={updateUser}/>} />
           <Route path="/search" element={<SearchAndFilter/>} /> 
 
         </Routes>
