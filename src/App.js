@@ -24,7 +24,13 @@ function App() {
 
     fetch(`https://jsonplaceholder.typicode.com/users`).then(response => response.json()).then(data =>setUsers(data))
 
-  },[])
+  },[]);
+
+  const addUser = (newUser) => {
+    setUsers([...users, newUser]);
+  };
+
+
 
   const updateUser = (updatedUser) => {
     setUsers(users.map(user => user.id === updatedUser.id ? updatedUser : user));
@@ -54,7 +60,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Dashboard users={users}/>} />
           <Route path="/users" element={<UserList users={users} deleteUser={deleteUser} />} />
-          <Route path="/users/create" element={<UserForm />} />
+          <Route path="/users/create" element={<UserForm addUser={addUser} />} />
           <Route path="/view-users" element={<ViewUsers users={users} />} /> 
           <Route path="/users/edit/:id" element={<UserForm users={users} updateUser={updateUser}/>} />
           <Route path="/search" element={<SearchAndFilter/>} /> 
