@@ -63,7 +63,7 @@ function App() {
           <Route path="/users/create" element={<UserForm addUser={addUser} />} />
           <Route path="/view-users" element={<ViewUsers users={users} />} /> 
           <Route path="/users/edit/:id" element={<UserForm users={users} updateUser={updateUser}/>} />
-          <Route path="/search" element={<SearchAndFilter/>} /> 
+          <Route path="/search" element={<SearchAndFilter users={users} />} /> 
 
         </Routes>
       </div>
