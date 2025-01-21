@@ -8,6 +8,8 @@ import ViewUsers from './components/ViewUsers';
 import SearchAndFilter from './components/SearchAndFilter';
 import UserForm from './components/UserForm';
 
+import './styles.css';
+
 
 
 
