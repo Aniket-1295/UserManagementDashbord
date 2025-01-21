@@ -46,7 +46,7 @@ function App() {
           <Route path="/" element={<Dashboard users={users}/>} />
           <Route path="/users" element={<UserList/>} />
           <Route path="/users/create" element={<UserForm />} />
-          <Route path="/view-users" element={<ViewUsers/>} /> 
+          <Route path="/view-users" element={<ViewUsers users={users} />} /> 
           <Route path="/users/edit/:id" element={<UserForm/>} />
           <Route path="/search" element={<SearchAndFilter/>} /> 
 
